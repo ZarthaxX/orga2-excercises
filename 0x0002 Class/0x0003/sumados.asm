@@ -20,7 +20,7 @@ primerMaximo:
 	.ciclo:
 		mov ESI,[RDI+RCX*4-4] ;Guardo valor de matriz en posicion RCX
 		sub ESI,[RAX]
-		JB .menor
+		JL .menor
 		lea RAX,[RDI+RCX*4-4] ;Guardo direccion de nuevo maximo en RAX
 		.menor:	
 		loop .ciclo
